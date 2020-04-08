@@ -5,7 +5,7 @@
 ````
 
 ##1.2gitbook常用命令
-1. gitbook -V 查看版本号
+1. gitbook -V 查看版本号 test
 2. gitbook ls 列出本地所有的gitbook版本
 3. gitbook init 初始化
 4. gitbook install 安装插件
