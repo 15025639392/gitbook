@@ -34,15 +34,17 @@
     - 命令: `git status`
 
 #### git中的忽略文件
-    - .gitignore,在这个文件中可以设置要被忽略的文件或者目录。
-    - 被忽略的文件不会被提交仓储里去.
-    - 在.gitignore中可以书写要被忽略的文件的路径，以/开头，
+.gitignore,在这个文件中可以设置要被忽略的文件或者目录。
+被忽略的文件不会被提交仓储里去.
+
+.gitignore中可以书写要被忽略的文件的路径，以/开头，
     一行写一个路径，这些路径所对应的文件都会被忽略，
     不会被提交到仓储中
-      + 写法
-          * ` /.idea  ` 会忽略.idea文件
-          * ` /js`      会忽略js目录里的所有文件
-          * ` /js/*.js` 会忽略js目录下所有js文件
+
+    写法
+      * ` /.idea  ` 会忽略.idea文件
+      * ` /js`      会忽略js目录里的所有文件
+      * ` /js/*.js` 会忽略js目录下所有js文件
 
 #### 查看日志
     - `git log` 查看历史提交的日志
@@ -106,6 +108,6 @@
   当前分支与远程的指定的分支进行关联。git push origin master)
 
 #### 设置快捷方式
-    - git remote add origin [地址] 创建远程仓库后，会让git记录远程仓库叫origin
+  >git remote add origin [地址] 创建远程仓库后，会让git记录远程仓库叫origin
 
-    - 当git push -u origin master，git 就知道是对远程仓库origin（[地址]）提交文件 下次提交问卷直接git push 就行了
+  >当git push -u origin master，git 就知道是对远程仓库origin（[地址]）提交文件 下次提交问卷直接git push 就行了

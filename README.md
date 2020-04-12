@@ -3,7 +3,7 @@
 # npm install -g gitbook-cli
 --- 如果没有安装gitbook,此命令会默认同时安装 GitBook
 ````
-
+[https://chrisniael.gitbooks.io/gitbook-documentation/content/]
 ##1.2gitbook常用命令
 1. gitbook -V 查看版本号 test
 2. gitbook ls 列出本地所有的gitbook版本
