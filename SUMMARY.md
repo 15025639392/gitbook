@@ -1,5 +1,5 @@
 
-* [前端行业分析](./pages/javascript/study.md)
+<!-- * [前端行业分析](./pages/javascript/study.md) -->
   
 ## 
 ## git相关
@@ -11,6 +11,5 @@
   
 ## javascript相关
 * [javascript基础](./pages/javascript/base.md)
+* [javascript进阶](./pages/javascript/step1.md)
 * [javascript严格模式中的变化](./pages/javascript/strict.md)
-* [javascript面试题](./pages/javascript/qna.md)
-
