@@ -2,12 +2,18 @@
 <!-- * [前端行业分析](./pages/javascript/study.md) -->
   
 ## 
+
+* [前端必须掌握单词](./pages/javascript/word.md)
+  
+## 
+
 ## git相关
    * [gitbook基本使用](README.md)
    * [git基本使用](./pages/gitconfig.md)
   
 ## linux相关
 *  [linux基本命令](./pages/linux/command.md)
+
   
 ## javascript相关
 * [javascript基础](./pages/javascript/base.md)

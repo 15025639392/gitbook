@@ -72,19 +72,24 @@
 ````
 function deepCopy(oldObj){
     let newObj=null;
+    if(Array.isArray(item)){
+        newObj=newObj||[];
+    }else if(item instanceof Object){
+        newObj=newObj||{};
+    }else{
+        newObj=oldObj;
+        return newObj
+    }
     for(let key in oldObj){
         let item=oldObj[key];
         //1.判断是否数组
         //2.判断是否对象
         //3.是否简单数据
         if(Array.isArray(item)){
-            newObj=newObj||[];
             newObj[key]=deepCopy(item,[]);
         }else if(item instanceof Object){
-            newObj=newObj||{};
             newObj[key]=deepCopy(item,{});
         }else{
-            newObj=newObj||{};
             newObj[key] = item;
         }
     }
@@ -102,7 +107,7 @@ function deepCopy(oldObj){
 ## 1.7 基本数据类型的一些注意点
 ````
 1.字符串不可变
-    字符串的🈯值不可变，虽然可以重新赋值，但是每一次赋值都会在内存中新开辟一块空间
+    字符串的值不可变，虽然可以重新赋值，但是每一次赋值都会在内存中新开辟一块空间
 2.基本包装类型
     //let str = 'test';
     //console.log(str.length);

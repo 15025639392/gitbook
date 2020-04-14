@@ -123,5 +123,100 @@ function throttle(fn){
 #### 3.1 深度优先遍历
 >从某个顶点v出发，首先访问该顶点然后依次从它的各个未被访问的邻接点出发深度优先搜索遍历图，直至图中所有和v有路径相通的顶点都被访问到。若此时尚有其他顶点未被访问到，则另选一个未被访问的顶点作起始点，重复上述过程，直至图中所有顶点都被访问到为止
 
+![深度优先](../../images/deep.png)
+
+````
+let orgTree=[
+    {
+        id:'test',
+        name:'众康云医院',
+        children:[
+            {
+                id:'test2',
+                name:'心血管科室',
+                children:[{
+                    id:'test3',
+                    name:'test3'
+                }]
+            }
+        ]
+    },
+    {
+        id:'dadad',
+        name:'江北医院'
+    }
+];
+//方式1 递归方式
+function deepTraversal(tree){
+    if(!tree||!tree.length){
+        return []
+    }
+    let arr = [];
+    for(let i=0;i<tree.length;i++){
+        let item = tree[i];
+        let obj={
+            id:item.id,
+            name:item.name
+        }
+        arr.push(obj);
+        if(item.children&&item.children.length){
+            arr.push(...deepTraversal(item.children))
+        }
+    }
+    return arr
+}
+
+//方式2 非递归方式
+function deepTraversal(tree){
+    if(!tree){
+        return []
+    }
+    let arr = [];
+    let stack = [];
+    for(let i=0;i<tree.length;i++){
+        let item = tree[i];
+        stack.push(item);
+        while(stack.length){
+            let stackItem = stack.pop();
+            arr.push({
+                id:stackItem.id,
+                name: stackItem.name
+            });
+            let children = stackItem.children||[];
+            if(children.length){
+                for(let c = children.length-1;c>=0;c--){
+                    stack.push(children[i])
+                }
+            }
+        }
+    }
+    return arr
+}
+````
 #### 3.2
 >从某顶点v出发，在访问了v之后依次访问v的各个未曾访问过的邻接点，然后分别从这些邻接点出发依次访问它们的邻接点，并使得“先被访问的顶点的邻接点先于后被访问的顶点的邻接点被访问，直至图中所有已被访问的顶点的邻接点都被访问到。 如果此时图中尚有顶点未被访问，则需要另选一个未曾被访问过的顶点作为新的起始点，重复上述过程，直至图中所有顶点都被访问到为止。
+
+![广度优先](../../images/wide.png)
+
+````
+function wideTraversal(tree){
+    let arr=[];
+    let queue=[];
+    queue.unshift(...tree);
+    while(queue.length){
+        let stackItem = stack.shift();
+        arr.push({
+            id:stackItem.id,
+            name: stackItem.name
+        });
+        let children = stackItem.children||[];
+        if(children.length){
+            for(let c =0; c<children.length;c++){
+                queue.push(children[i])
+            }
+        }
+    }
+    return arr;
+}
+
+````
