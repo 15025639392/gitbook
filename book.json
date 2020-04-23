@@ -1,0 +1,45 @@
+
+{
+    "title": "前端知识整理",
+    "author": "ldy",
+    "description": "搜索模块名称",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./style/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "plugins": [
+        "-sharing",
+        "splitter",
+        "expandable-chapters",
+        "anchors",
+
+        "github",
+        "github-buttons",
+        "donate",
+        "sharing-plus"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/15025639392/gitbook"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "15025639392",
+                "repo": "gitbook",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        },
+        "donate": {
+            "title": "",
+            "button": "赞赏",
+            "alipayText": " "
+        }
+    }
+}

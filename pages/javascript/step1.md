@@ -120,8 +120,14 @@ function throttle(fn){
 
 ## 3. 深度优先遍历及广度优先遍历
 
-#### 3.1 深度优先遍历
->从某个顶点v出发，首先访问该顶点然后依次从它的各个未被访问的邻接点出发深度优先搜索遍历图，直至图中所有和v有路径相通的顶点都被访问到。若此时尚有其他顶点未被访问到，则另选一个未被访问的顶点作起始点，重复上述过程，直至图中所有顶点都被访问到为止
+#### 3.1 深度优先遍历(Depth First Search)的主要思想是
+>1、首先以一个未被访问过的顶点作为起始顶点，沿当前顶点的边走到未访问过的顶点；
+
+>2、当没有未访问过的顶点时，则回到上一个顶点，继续试探别的顶点，直至所有的顶点都被访问过。
+
+网上有一句话很贴切（不到南墙不回头）
+
+ 
 
 ![深度优先](../../images/deep.png)
 
@@ -185,7 +191,7 @@ function deepTraversal(tree){
             let children = stackItem.children||[];
             if(children.length){
                 for(let c = children.length-1;c>=0;c--){
-                    stack.push(children[i])
+                    stack.push(children[c])
                 }
             }
         }
@@ -194,7 +200,7 @@ function deepTraversal(tree){
 }
 ````
 #### 3.2
->从某顶点v出发，在访问了v之后依次访问v的各个未曾访问过的邻接点，然后分别从这些邻接点出发依次访问它们的邻接点，并使得“先被访问的顶点的邻接点先于后被访问的顶点的邻接点被访问，直至图中所有已被访问的顶点的邻接点都被访问到。 如果此时图中尚有顶点未被访问，则需要另选一个未曾被访问过的顶点作为新的起始点，重复上述过程，直至图中所有顶点都被访问到为止。
+>广度优先遍历(Breadth-First-Search)的主要思想是：类似于树的层序遍历。
 
 ![广度优先](../../images/wide.png)
 
@@ -204,15 +210,15 @@ function wideTraversal(tree){
     let queue=[];
     queue.unshift(...tree);
     while(queue.length){
-        let stackItem = stack.shift();
+        let queueItem = queue.shift();
         arr.push({
-            id:stackItem.id,
-            name: stackItem.name
+            id:queueItem.id,
+            name: queueItem.name
         });
-        let children = stackItem.children||[];
+        let children = queueItem.children||[];
         if(children.length){
             for(let c =0; c<children.length;c++){
-                queue.push(children[i])
+                queue.push(children[c])
             }
         }
     }

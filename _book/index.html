@@ -1,20 +1,36 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gitbook基本使用 · GitBook</title>
+        <title>gitbook基本使用 · 前端知识整理</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="ldy">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -34,19 +50,12 @@
 
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
+        <link rel="stylesheet" href="style/website.css">
         
     
 
         
+    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -60,8 +69,17 @@
     <link rel="next" href="pages/gitconfig.html" />
     
     
-    <link rel="prev" href="pages/javascript/word.html" />
-    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]};
+    </script>
 
     </head>
     <body>
@@ -71,7 +89,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -87,36 +105,11 @@
 
     
         
-        
-    
-        <li class="chapter " data-level="1.1" data-path="pages/javascript/word.html">
-            
-                <a href="pages/javascript/word.html">
-            
-                    
-                    前端必须掌握单词
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-
-    
-        
         <li class="header">git相关</li>
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="./">
+        <li class="chapter active" data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -129,7 +122,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="pages/gitconfig.html">
+        <li class="chapter " data-level="1.2" data-path="pages/gitconfig.html">
             
                 <a href="pages/gitconfig.html">
             
@@ -149,7 +142,7 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="pages/linux/command.html">
+        <li class="chapter " data-level="2.1" data-path="pages/linux/command.html">
             
                 <a href="pages/linux/command.html">
             
@@ -169,7 +162,7 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="pages/javascript/base.html">
+        <li class="chapter " data-level="3.1" data-path="pages/javascript/base.html">
             
                 <a href="pages/javascript/base.html">
             
@@ -182,7 +175,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="pages/javascript/step1.html">
+        <li class="chapter " data-level="3.2" data-path="pages/javascript/step1.html">
             
                 <a href="pages/javascript/step1.html">
             
@@ -195,7 +188,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="pages/javascript/strict.html">
+        <li class="chapter " data-level="3.3" data-path="pages/javascript/strict.html">
             
                 <a href="pages/javascript/strict.html">
             
@@ -210,12 +203,45 @@
     
 
     
+        
+        <li class="header">前端周边技术</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="pages/javascript/word.html">
+            
+                <a href="pages/javascript/word.html">
+            
+                    
+                    常用单词汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="pages/javascript/qna.html">
+            
+                <a href="pages/javascript/qna.html">
+            
+                    
+                    进阶面试题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class="divider"></li>
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -253,11 +279,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="11&#x5B89;&#x88C5;gitbook">1.1&#x5B89;&#x88C5;gitbook</h2>
+                                <h2 id="11&#x5B89;&#x88C5;gitbook"><a name="11&#x5B89;&#x88C5;gitbook" class="plugin-anchor" href="#11&#x5B89;&#x88C5;gitbook"><i class="fa fa-link" aria-hidden="true"></i></a>1.1&#x5B89;&#x88C5;gitbook</h2>
 <pre><code># npm install -g gitbook-cli
 --- &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;gitbook,&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x9ED8;&#x8BA4;&#x540C;&#x65F6;&#x5B89;&#x88C5; GitBook
 </code></pre><p>[<a href="https://chrisniael.gitbooks.io/gitbook-documentation/content/" target="_blank">https://chrisniael.gitbooks.io/gitbook-documentation/content/</a>]</p>
-<h2 id="12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;">1.2gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<h2 id="12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="plugin-anchor" href="#12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
 <ol>
 <li>gitbook -V &#x67E5;&#x770B;&#x7248;&#x672C;&#x53F7; test</li>
 <li>gitbook ls &#x5217;&#x51FA;&#x672C;&#x5730;&#x6240;&#x6709;&#x7684;gitbook&#x7248;&#x672C;</li>
@@ -299,12 +325,8 @@
 
             
                 
-                <a href="pages/javascript/word.html" class="navigation navigation-prev " aria-label="Previous page: 前端必须掌握单词">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="pages/gitconfig.html" class="navigation navigation-next " aria-label="Next page: git基本使用">
+                <a href="pages/gitconfig.html" class="navigation navigation-next navigation-unique" aria-label="Next page: git基本使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -315,7 +337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook基本使用","level":"3.1","depth":1,"next":{"title":"git基本使用","level":"3.2","depth":1,"path":"pages/gitconfig.md","ref":"./pages/gitconfig.md","articles":[]},"previous":{"title":"前端必须掌握单词","level":"1.1","depth":1,"path":"pages/javascript/word.md","ref":"./pages/javascript/word.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-04-10T19:08:20.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-14T08:46:29.292Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"gitbook基本使用","level":"1.1","depth":1,"next":{"title":"git基本使用","level":"1.2","depth":1,"path":"pages/gitconfig.md","ref":"./pages/gitconfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"README.md","mtime":"2020-04-10T19:08:20.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-23T18:30:07.310Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -323,6 +345,30 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -338,10 +384,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
