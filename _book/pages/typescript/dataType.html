@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>javascript严格模式中的变化 · 前端知识整理</title>
+        <title>数据类型 · 前端知识整理</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../typescript/dataType.html" />
+    <link rel="next" href="../javascript/word.html" />
     
     
-    <link rel="prev" href="step1.html" />
+    <link rel="prev" href="../javascript/strict.html" />
     
 
     <style>
@@ -160,9 +160,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="base.html">
+        <li class="chapter " data-level="3.1" data-path="../javascript/base.html">
             
-                <a href="base.html">
+                <a href="../javascript/base.html">
             
                     
                     javascript基础
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="step1.html">
+        <li class="chapter " data-level="3.2" data-path="../javascript/step1.html">
             
-                <a href="step1.html">
+                <a href="../javascript/step1.html">
             
                     
                     javascript进阶
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="strict.html">
+        <li class="chapter " data-level="3.3" data-path="../javascript/strict.html">
             
-                <a href="strict.html">
+                <a href="../javascript/strict.html">
             
                     
                     javascript严格模式中的变化
@@ -206,9 +206,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../typescript/dataType.html">
+        <li class="chapter active" data-level="4.1" data-path="dataType.html">
             
-                <a href="../typescript/dataType.html">
+                <a href="dataType.html">
             
                     
                     数据类型
@@ -226,9 +226,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="word.html">
+        <li class="chapter " data-level="5.1" data-path="../javascript/word.html">
             
-                <a href="word.html">
+                <a href="../javascript/word.html">
             
                     
                     常用单词汇总
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="qna.html">
+        <li class="chapter " data-level="5.2" data-path="../javascript/qna.html">
             
-                <a href="qna.html">
+                <a href="../javascript/qna.html">
             
                     
                     进阶面试题汇总
@@ -282,7 +282,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >javascript严格模式中的变化</a>
+        <a href="../.." >数据类型</a>
     </h1>
 </div>
 
@@ -297,13 +297,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x53D8;&#x5316;"><a name="&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x53D8;&#x5316;" class="plugin-anchor" href="#&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x53D8;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x53D8;&#x5316;</h2>
-<h4 id="11-this&#x6307;&#x5411;&#x8C03;&#x6574;"><a name="11-this&#x6307;&#x5411;&#x8C03;&#x6574;" class="plugin-anchor" href="#11-this&#x6307;&#x5411;&#x8C03;&#x6574;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 this&#x6307;&#x5411;&#x8C03;&#x6574;</h4>
-<pre><code>1. &#x5168;&#x5C40;&#x51FD;&#x6570;this&#x6307;&#x5411;undefined&#x800C;&#x4E0D;&#x662F;window
-2. &#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5220;&#x9664;&#x5DF2;&#x7533;&#x660E;&#x53D8;&#x91CF;
-</code></pre><h4 id="12&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53D8;&#x5316;"><a name="12&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53D8;&#x5316;" class="plugin-anchor" href="#12&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53D8;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53D8;&#x5316;</h4>
-<pre><code>1. &#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x6709;&#x540C;&#x540D;&#x53C2;&#x6570;
-2. &#x4E0D;&#x5141;&#x8BB8;&#x5728;&#x975E;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5757;&#x7533;&#x660E;&#x51FD;&#x6570;
+                                <h2 id="typescript&#x76F8;&#x5BF9;&#x4E8E;javascript&#x6765;&#x8BF4;&#x589E;&#x52A0;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;"><a name="typescript&#x76F8;&#x5BF9;&#x4E8E;javascript&#x6765;&#x8BF4;&#x589E;&#x52A0;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;" class="plugin-anchor" href="#typescript&#x76F8;&#x5BF9;&#x4E8E;javascript&#x6765;&#x8BF4;&#x589E;&#x52A0;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>TypeScript&#x76F8;&#x5BF9;&#x4E8E;javascript&#x6765;&#x8BF4;&#x589E;&#x52A0;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;</h2>
+<pre><code>//1.&#x5143;&#x7EC4;&#x7C7B;&#x578B; (tuple)
+//2.&#x679A;&#x4E3E;&#x7C7B;&#x578B; (enum)
+//3.&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#xFF08;any&#xFF09;
+//4.never&#x7C7B;&#x578B;
+
+//&#x57FA;&#x672C;&#x8D4B;&#x503C;&#x65B9;&#x6CD5;
+let arr:number[]=[1,2,3]
+let arr:Array&lt;number&gt;=[1,2,3]
+
+//&#x5143;&#x7EC4;
+let arr:[string,number,boolean] = [&apos;1&apos;,2,true]
+
+//&#x679A;&#x4E3E;
+enum flag {
+    succes:1,
+    error:0
+}
 </code></pre>
                                 
                                 </section>
@@ -331,12 +342,12 @@
 
             
                 
-                <a href="step1.html" class="navigation navigation-prev " aria-label="Previous page: javascript进阶">
+                <a href="../javascript/strict.html" class="navigation navigation-prev " aria-label="Previous page: javascript严格模式中的变化">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../typescript/dataType.html" class="navigation navigation-next " aria-label="Next page: 数据类型">
+                <a href="../javascript/word.html" class="navigation navigation-next " aria-label="Next page: 常用单词汇总">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -347,7 +358,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javascript严格模式中的变化","level":"3.3","depth":1,"next":{"title":"数据类型","level":"4.1","depth":1,"path":"pages/typescript/dataType.md","ref":"./pages/typescript/dataType.md","articles":[]},"previous":{"title":"javascript进阶","level":"3.2","depth":1,"path":"pages/javascript/step1.md","ref":"./pages/javascript/step1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/javascript/strict.md","mtime":"2020-04-10T09:55:18.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T18:26:19.759Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据类型","level":"4.1","depth":1,"next":{"title":"常用单词汇总","level":"5.1","depth":1,"path":"pages/javascript/word.md","ref":"./pages/javascript/word.md","articles":[]},"previous":{"title":"javascript严格模式中的变化","level":"3.3","depth":1,"path":"pages/javascript/strict.md","ref":"./pages/javascript/strict.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/typescript/dataType.md","mtime":"2020-04-25T18:24:30.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T18:26:19.759Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

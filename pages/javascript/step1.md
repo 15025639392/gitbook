@@ -226,3 +226,116 @@ function wideTraversal(tree){
 }
 
 ````
+
+## 4. 函数式编程--柯理化
+>在数学和计算机科学中，柯理化式一种将多个参数的一个函数转换成一系列可以使用一个参数的函数的技术。
+
+#### 4.1 前端为什么使用柯理化？
+>简化代码结构，提高系统的可维护性，一个方法，只有一个参数，强制了功能的单一性，很自然的做到了功能内聚，降低耦合。
+
+总结：减少重复代码，提高代码适应性
+
+````
+//1.初始化一个要求你下一次将参数传完的函数 (fixedFunction)
+//2.初始化每次调用检查参数是否已经累计传完的函数（fixArgs）
+//3.如果本次调用检查到参数没传完，那么返回一个下一次期待你传完的函数
+
+function curry(fn){
+    function fixedFunction(fuc){
+        let args = [].slice.call(arguments,1);//获取当前传入的参数个数
+        return function(){
+            let currentArgs = args.concat([].slice.call(arguments,0))//组装所需要的参数
+            return fuc.apply(this,currentArgs)
+        }
+    }
+    function fixArgs(fn,length){
+        let len = length||fn.length;
+        return function(){
+            if(arguments.length<len){
+                let com = [fn].concat([].slice.call(arguments,0));
+                let reset = fixedFunction.apply(this,com);
+                return fixArgs.apply(this,[reset,len-arguments.length]);
+            }else{
+                return fn.apply(this,arguments)
+            }
+        }
+    }
+
+    return fixArgs(fn)
+}
+
+
+function test(a,b,c){
+    return a+b+c
+}
+
+let cuTest = curry(test);
+
+let test1 = cuTest(3);
+console.log(test1(2,10))
+console.log(test1(2)(2))
+````
+
+## 5. 函数性能优化
+
+#### 5.1 惰性函数
+>函数的分之语句在函数首次调用的时候执行，之后的调用不再执行分之语句，直接进入函数首次调用的分之
+
+````
+function test(){
+    var a = 'test';
+    console.log(a);
+    test = function(){
+        console.log(`a的值是:${a}`)
+    }
+    test()
+}
+
+test()// test, a的值是:test
+test()// a的值是:test
+test()// a的值是:test
+test()// a的值是:test
+````
+
+#### 5.2 函数记忆
+>缓存曾经计算过的数据，如果数据存在，返回已存在数据，如果不存在，计算并缓存
+
+````
+function memorise(fn){
+    let cache={}
+    return function(){
+        let key = arguments.length+[].join.call(arguments);
+        if(cache[key]){
+            return cache[key]
+        }else{
+            cache[key] = fn.apply(this,arguments);
+            return cache[key]
+        }
+    }
+}
+function test(){
+    let t = 1;
+    for(let i = 0;i<100000;i++){
+        t++
+    }
+    return t
+}
+let newTest = memorise(test);
+
+console.time('no me')
+console.log(newTest())
+console.timeEnd('no me')
+
+console.time('111111')
+console.log(newTest())
+console.timeEnd('111111')
+
+console.time('222222')
+console.log(newTest())
+console.timeEnd('222222')
+
+console.time('333333')
+console.log(newTest())
+console.timeEnd('333333')
+````
+![输出结果](../../images/memo.png)

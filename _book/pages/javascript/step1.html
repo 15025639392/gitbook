@@ -17,10 +17,6 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
@@ -206,11 +202,31 @@
 
     
         
+        <li class="header">TypeScript相关</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../typescript/dataType.html">
+            
+                <a href="../typescript/dataType.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">前端周边技术</li>
         
         
     
-        <li class="chapter " data-level="4.1" data-path="word.html">
+        <li class="chapter " data-level="5.1" data-path="word.html">
             
                 <a href="word.html">
             
@@ -223,7 +239,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="qna.html">
+        <li class="chapter " data-level="5.2" data-path="qna.html">
             
                 <a href="qna.html">
             
@@ -485,7 +501,113 @@ function deepTraversal(tree){
     }
     return arr;
 }
-</code></pre>
+</code></pre><h2 id="4-&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;--&#x67EF;&#x7406;&#x5316;"><a name="4-&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;--&#x67EF;&#x7406;&#x5316;" class="plugin-anchor" href="#4-&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;--&#x67EF;&#x7406;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;--&#x67EF;&#x7406;&#x5316;</h2>
+<blockquote>
+<p>&#x5728;&#x6570;&#x5B66;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x4E2D;&#xFF0C;&#x67EF;&#x7406;&#x5316;&#x5F0F;&#x4E00;&#x79CD;&#x5C06;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+</blockquote>
+<h4 id="41-&#x524D;&#x7AEF;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x67EF;&#x7406;&#x5316;&#xFF1F;"><a name="41-&#x524D;&#x7AEF;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x67EF;&#x7406;&#x5316;&#xFF1F;" class="plugin-anchor" href="#41-&#x524D;&#x7AEF;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x67EF;&#x7406;&#x5316;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 &#x524D;&#x7AEF;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x67EF;&#x7406;&#x5316;&#xFF1F;</h4>
+<blockquote>
+<p>&#x7B80;&#x5316;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#xFF0C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5F3A;&#x5236;&#x4E86;&#x529F;&#x80FD;&#x7684;&#x5355;&#x4E00;&#x6027;&#xFF0C;&#x5F88;&#x81EA;&#x7136;&#x7684;&#x505A;&#x5230;&#x4E86;&#x529F;&#x80FD;&#x5185;&#x805A;&#xFF0C;&#x964D;&#x4F4E;&#x8026;&#x5408;&#x3002;</p>
+</blockquote>
+<p>&#x603B;&#x7ED3;&#xFF1A;&#x51CF;&#x5C11;&#x91CD;&#x590D;&#x4EE3;&#x7801;&#xFF0C;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x9002;&#x5E94;&#x6027;</p>
+<pre><code>//1.&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x8981;&#x6C42;&#x4F60;&#x4E0B;&#x4E00;&#x6B21;&#x5C06;&#x53C2;&#x6570;&#x4F20;&#x5B8C;&#x7684;&#x51FD;&#x6570; (fixedFunction)
+//2.&#x521D;&#x59CB;&#x5316;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x68C0;&#x67E5;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x7D2F;&#x8BA1;&#x4F20;&#x5B8C;&#x7684;&#x51FD;&#x6570;&#xFF08;fixArgs&#xFF09;
+//3.&#x5982;&#x679C;&#x672C;&#x6B21;&#x8C03;&#x7528;&#x68C0;&#x67E5;&#x5230;&#x53C2;&#x6570;&#x6CA1;&#x4F20;&#x5B8C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4E0B;&#x4E00;&#x6B21;&#x671F;&#x5F85;&#x4F60;&#x4F20;&#x5B8C;&#x7684;&#x51FD;&#x6570;
+
+function curry(fn){
+    function fixedFunction(fuc){
+        let args = [].slice.call(arguments,1);//&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E2A;&#x6570;
+        return function(){
+            let currentArgs = args.concat([].slice.call(arguments,0))//&#x7EC4;&#x88C5;&#x6240;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;
+            return fuc.apply(this,currentArgs)
+        }
+    }
+    function fixArgs(fn,length){
+        let len = length||fn.length;
+        return function(){
+            if(arguments.length&lt;len){
+                let com = [fn].concat([].slice.call(arguments,0));
+                let reset = fixedFunction.apply(this,com);
+                return fixArgs.apply(this,[reset,len-arguments.length]);
+            }else{
+                return fn.apply(this,arguments)
+            }
+        }
+    }
+
+    return fixArgs(fn)
+}
+
+
+function test(a,b,c){
+    return a+b+c
+}
+
+let cuTest = curry(test);
+
+let test1 = cuTest(3);
+console.log(test1(2,10))
+console.log(test1(2)(2))
+</code></pre><h2 id="5-&#x51FD;&#x6570;&#x6027;&#x80FD;&#x4F18;&#x5316;"><a name="5-&#x51FD;&#x6570;&#x6027;&#x80FD;&#x4F18;&#x5316;" class="plugin-anchor" href="#5-&#x51FD;&#x6570;&#x6027;&#x80FD;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x51FD;&#x6570;&#x6027;&#x80FD;&#x4F18;&#x5316;</h2>
+<h4 id="51-&#x60F0;&#x6027;&#x51FD;&#x6570;"><a name="51-&#x60F0;&#x6027;&#x51FD;&#x6570;" class="plugin-anchor" href="#51-&#x60F0;&#x6027;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 &#x60F0;&#x6027;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p>&#x51FD;&#x6570;&#x7684;&#x5206;&#x4E4B;&#x8BED;&#x53E5;&#x5728;&#x51FD;&#x6570;&#x9996;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x8C03;&#x7528;&#x4E0D;&#x518D;&#x6267;&#x884C;&#x5206;&#x4E4B;&#x8BED;&#x53E5;&#xFF0C;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x51FD;&#x6570;&#x9996;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x5206;&#x4E4B;</p>
+</blockquote>
+<pre><code>function test(){
+    var a = &apos;test&apos;;
+    console.log(a);
+    test = function(){
+        console.log(`a&#x7684;&#x503C;&#x662F;:${a}`)
+    }
+    test()
+}
+
+test()// test, a&#x7684;&#x503C;&#x662F;:test
+test()// a&#x7684;&#x503C;&#x662F;:test
+test()// a&#x7684;&#x503C;&#x662F;:test
+test()// a&#x7684;&#x503C;&#x662F;:test
+</code></pre><h4 id="52-&#x51FD;&#x6570;&#x8BB0;&#x5FC6;"><a name="52-&#x51FD;&#x6570;&#x8BB0;&#x5FC6;" class="plugin-anchor" href="#52-&#x51FD;&#x6570;&#x8BB0;&#x5FC6;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 &#x51FD;&#x6570;&#x8BB0;&#x5FC6;</h4>
+<blockquote>
+<p>&#x7F13;&#x5B58;&#x66FE;&#x7ECF;&#x8BA1;&#x7B97;&#x8FC7;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;&#x5DF2;&#x5B58;&#x5728;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8BA1;&#x7B97;&#x5E76;&#x7F13;&#x5B58;</p>
+</blockquote>
+<pre><code>function memorise(fn){
+    let cache={}
+    return function(){
+        let key = arguments.length+[].join.call(arguments);
+        if(cache[key]){
+            return cache[key]
+        }else{
+            cache[key] = fn.apply(this,arguments);
+            return cache[key]
+        }
+    }
+}
+function test(){
+    let t = 1;
+    for(let i = 0;i&lt;100000;i++){
+        t++
+    }
+    return t
+}
+let newTest = memorise(test);
+
+console.time(&apos;no me&apos;)
+console.log(newTest())
+console.timeEnd(&apos;no me&apos;)
+
+console.time(&apos;111111&apos;)
+console.log(newTest())
+console.timeEnd(&apos;111111&apos;)
+
+console.time(&apos;222222&apos;)
+console.log(newTest())
+console.timeEnd(&apos;222222&apos;)
+
+console.time(&apos;333333&apos;)
+console.log(newTest())
+console.timeEnd(&apos;333333&apos;)
+</code></pre><p><img src="../../images/memo.png" alt="&#x8F93;&#x51FA;&#x7ED3;&#x679C;"></p>
+
                                 
                                 </section>
                             
@@ -528,7 +650,7 @@ function deepTraversal(tree){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javascript进阶","level":"3.2","depth":1,"next":{"title":"javascript严格模式中的变化","level":"3.3","depth":1,"path":"pages/javascript/strict.md","ref":"./pages/javascript/strict.md","articles":[]},"previous":{"title":"javascript基础","level":"3.1","depth":1,"path":"pages/javascript/base.md","ref":"./pages/javascript/base.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/javascript/step1.md","mtime":"2020-04-14T19:37:10.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-23T18:30:07.310Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javascript进阶","level":"3.2","depth":1,"next":{"title":"javascript严格模式中的变化","level":"3.3","depth":1,"path":"pages/javascript/strict.md","ref":"./pages/javascript/strict.md","articles":[]},"previous":{"title":"javascript基础","level":"3.1","depth":1,"path":"pages/javascript/base.md","ref":"./pages/javascript/base.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/javascript/step1.md","mtime":"2020-04-25T16:56:20.021Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T18:26:19.759Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -536,10 +658,6 @@ function deepTraversal(tree){
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>

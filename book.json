@@ -13,7 +13,6 @@
     },
     "plugins": [
         "-sharing",
-        "splitter",
         "expandable-chapters",
         "anchors",
 
