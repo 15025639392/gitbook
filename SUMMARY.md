@@ -13,6 +13,8 @@
 
 ## TypeScript相关
   * [数据类型](./pages/typescript/dataType.md)
+  * [接口](./pages/typescript/interface.md)
+  * [装饰器](./pages/typescript/decorator.md)
 
 ## 前端周边技术
   * [常用单词汇总](./pages/javascript/word.md)

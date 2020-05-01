@@ -72,9 +72,9 @@
 ````
 function deepCopy(oldObj){
     let newObj=null;
-    if(Array.isArray(item)){
+    if(Array.isArray(oldObj)){
         newObj=newObj||[];
-    }else if(item instanceof Object){
+    }else if(oldObj instanceof Object){
         newObj=newObj||{};
     }else{
         newObj=oldObj;
@@ -86,9 +86,9 @@ function deepCopy(oldObj){
         //2.判断是否对象
         //3.是否简单数据
         if(Array.isArray(item)){
-            newObj[key]=deepCopy(item,[]);
+            newObj[key]=deepCopy(item);
         }else if(item instanceof Object){
-            newObj[key]=deepCopy(item,{});
+            newObj[key]=deepCopy(item);
         }else{
             newObj[key] = item;
         }
