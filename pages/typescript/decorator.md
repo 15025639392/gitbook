@@ -8,7 +8,7 @@
 >类装饰器表达式在运行时，被当作函数调用，类的构造函数是其唯一的参数
 >如果装饰器返回一个值，它会使用提供的构造函数来替换类的声明
 
-````
+````typescript
 // 修改属性和方法
 function extension(target){
     target.protoytpe.dynamicAttr = '动态扩展的属性'
@@ -47,7 +47,7 @@ class Test{
 >参数1:对于静态成员来说是类的构造函数，对于实例成员来说是类的原型对象
 >参数2:成员名称
 
-````
+````typescript
 function consoleAttr(params){
     return function(target,attr){
         console.log(target,attr)
@@ -72,7 +72,7 @@ class Test{
 > 2. 成员名字
 > 3. 成员属性描述符
 
-````
+````typescript
 function consoleFuc(params){
     return function(target,name,desc){
         console.log(target,name,desc);
@@ -101,7 +101,7 @@ class Test{
 > 2. 方法名字
 > 3. 参数在参数列表中的索引
 
-````
+````typescript
 function consoleParams(params){
     return function(target,name,index){
         console.log(target,name,index);

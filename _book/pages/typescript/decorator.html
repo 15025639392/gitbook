@@ -25,11 +25,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
                 
             
                 
@@ -337,59 +337,61 @@
 <p>&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x88AB;&#x5F53;&#x4F5C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x662F;&#x5176;&#x552F;&#x4E00;&#x7684;&#x53C2;&#x6570;
 &#x5982;&#x679C;&#x88C5;&#x9970;&#x5668;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x5B83;&#x4F1A;&#x4F7F;&#x7528;&#x63D0;&#x4F9B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x66FF;&#x6362;&#x7C7B;&#x7684;&#x58F0;&#x660E;</p>
 </blockquote>
-<pre><code>// &#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;
-function extension(target){
-    target.protoytpe.dynamicAttr = &apos;&#x52A8;&#x6001;&#x6269;&#x5C55;&#x7684;&#x5C5E;&#x6027;&apos;
-}
-class Test{
-    constructor(){
+<pre class="language-"><code class="lang-typescript"><span class="token comment">// &#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</span>
+<span class="token keyword">function</span> <span class="token function">extension</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    target<span class="token punctuation">.</span>protoytpe<span class="token punctuation">.</span>dynamicAttr <span class="token operator">=</span> <span class="token string">&apos;&#x52A8;&#x6001;&#x6269;&#x5C55;&#x7684;&#x5C5E;&#x6027;&apos;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-    }
+    <span class="token punctuation">}</span>
 
-    getDataSource(){
-        console.log(this.dynamicAttr)
-    }
-}
+    <span class="token function">getDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dynamicAttr<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-//&#x91CD;&#x8F7D;&#x6784;&#x9020;&#x51FD;&#x6570;
-function extension(target){
-    return class extends target{
-        api = &apos;rewrite&apos;;
-        getDataSource(){
-            console.log(this.api)
-        }
-    }
-}
-class Test{
-    constructor(){
-        this.api = &apos;test&apos;
-    }
+<span class="token comment">//&#x91CD;&#x8F7D;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="token keyword">function</span> <span class="token function">extension</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> target<span class="token punctuation">{</span>
+        api <span class="token operator">=</span> <span class="token string">&apos;rewrite&apos;</span><span class="token punctuation">;</span>
+        <span class="token function">getDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>api<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>api <span class="token operator">=</span> <span class="token string">&apos;test&apos;</span>
+    <span class="token punctuation">}</span>
 
-    getDataSource(){
-        console.log(this.dynamicAttr)
-    }
-}
-</code></pre><h4 id="&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><a name="&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</h4>
+    <span class="token function">getDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dynamicAttr<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><a name="&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</h4>
 <blockquote>
 <p>&#x53C2;&#x6570;1:&#x5BF9;&#x4E8E;&#x9759;&#x6001;&#x6210;&#x5458;&#x6765;&#x8BF4;&#x662F;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x6765;&#x8BF4;&#x662F;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;
 &#x53C2;&#x6570;2:&#x6210;&#x5458;&#x540D;&#x79F0;</p>
 </blockquote>
-<pre><code>function consoleAttr(params){
-    return function(target,attr){
-        console.log(target,attr)
-    }
-}
-class Test{
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">consoleAttr</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>attr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>attr<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
     @consoleAttr
-    public api = &apos;test&apos;;
-    constructor(){
-    }
+    <span class="token keyword">public</span> api <span class="token operator">=</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
 
-    getDataSource(){
-        console.log(this.dynamicAttr)
-    }
-}
-</code></pre><h4 id="&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;"><a name="&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;</h4>
+    <span class="token function">getDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dynamicAttr<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;"><a name="&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;</h4>
 <blockquote>
 <p>&#x4F1A;&#x88AB;&#x5E94;&#x7528;&#x5230;&#x65B9;&#x6CD5;&#x7684;&#x5C5E;&#x6027;&#x4FEE;&#x9970;&#x7B26;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x76D1;&#x89C6;&#xFF0C;&#x4FEE;&#x6539;&#x6216;&#x66FF;&#x6362;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;
 &#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x81EA;&#x52A8;&#x4F20;&#x5165;3&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
@@ -399,27 +401,28 @@ class Test{
 <li>&#x6210;&#x5458;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;</li>
 </ol>
 </blockquote>
-<pre><code>function consoleFuc(params){
-    return function(target,name,desc){
-        console.log(target,name,desc);
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">consoleFuc</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>name<span class="token punctuation">,</span>desc</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>name<span class="token punctuation">,</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //&#x4FEE;&#x6539;&#x65B9;&#x6CD5;
-        let oldFn = desc.value;
-        desc.value = function(...args:any[]){
-            oldFn.apply(this,args)
-        }
-    }
-}
-class Test{
-    public api = &apos;test&apos;
-    constructor(){
-    }
-    @consoleFuc(&apos;test&apos;)
-    getDataSource(){
-        console.log(this.api)
-    }
-}
-</code></pre><h4 id="&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;"><a name="&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;</h4>
+        <span class="token comment">//&#x4FEE;&#x6539;&#x65B9;&#x6CD5;</span>
+        <span class="token keyword">let</span> oldFn <span class="token operator">=</span> desc<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        desc<span class="token punctuation">.</span><span class="token function-variable function">value</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args<span class="token operator">:</span><span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">oldFn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> api <span class="token operator">=</span> <span class="token string">&apos;test&apos;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    @<span class="token function">consoleFuc</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span>
+    <span class="token function">getDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>api<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;"><a name="&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;</h4>
 <blockquote>
 <p>&#x53EF;&#x4EE5;&#x4E3A;&#x539F;&#x578B;&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4F20;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ol>
@@ -428,19 +431,20 @@ class Test{
 <li>&#x53C2;&#x6570;&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7D22;&#x5F15;</li>
 </ol>
 </blockquote>
-<pre><code>function consoleParams(params){
-    return function(target,name,index){
-        console.log(target,name,index);
-    }
-}
-class Test{
-    constructor(){
-    }
-    @consoleFuc(&apos;test&apos;)
-    getDataSource(@consoleParams(&apos;test&apos;) id:any){
-    }
-}
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">consoleParams</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>name<span class="token punctuation">,</span>index</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>name<span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    @<span class="token function">consoleFuc</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span>
+    <span class="token function">getDataSource</span><span class="token punctuation">(</span>@<span class="token function">consoleParams</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span> id<span class="token operator">:</span><span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
+
                                 
                                 </section>
                             
@@ -483,7 +487,7 @@ class Test{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"4.3","depth":1,"next":{"title":"常用单词汇总","level":"5.1","depth":1,"path":"pages/javascript/word.md","ref":"./pages/javascript/word.md","articles":[]},"previous":{"title":"接口","level":"4.2","depth":1,"path":"pages/typescript/interface.md","ref":"./pages/typescript/interface.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/typescript/decorator.md","mtime":"2020-05-01T12:09:57.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T12:11:20.671Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"4.3","depth":1,"next":{"title":"常用单词汇总","level":"5.1","depth":1,"path":"pages/javascript/word.md","ref":"./pages/javascript/word.md","articles":[]},"previous":{"title":"接口","level":"4.2","depth":1,"path":"pages/typescript/interface.md","ref":"./pages/typescript/interface.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","code","github-buttons","-highlight","prism","prism-themes"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赞赏","alipayText":" "},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/typescript/decorator.md","mtime":"2020-05-01T15:58:30.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T16:09:19.924Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -501,15 +505,11 @@ class Test{
         
     
         
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         

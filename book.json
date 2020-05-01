@@ -15,11 +15,12 @@
         "-sharing",
         "expandable-chapters",
         "anchors",
-
         "github",
+        "code",
         "github-buttons",
-        "donate",
-        "sharing-plus"
+        "-highlight",
+        "prism",
+        "prism-themes"
     ],
     "pluginsConfig": {
         "github": {
@@ -35,6 +36,11 @@
                 }
             ]
         },
+        "prism": {
+            "css": [
+              "prism-themes/themes/prism-vsc-dark-plus.css"
+      
+        ]},
         "donate": {
             "title": "",
             "button": "赞赏",

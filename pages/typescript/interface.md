@@ -4,7 +4,7 @@
 #### 属性接口
 >对传入对象的约束
 
-````
+````typescript
 interface limit={
     name:sting;
     age:number
@@ -20,7 +20,7 @@ test({name:'ssss',age:18})
 #### 函数类型接口
 >对方法传入的参数，以及返回值进行约束
 
-````
+````typescript
 interface encrypt{
     (key:string,value:string):string
 }
@@ -33,7 +33,7 @@ let md5:encrypt=function(key:string,value:string){
 #### 类类型接口
 >对类的约束
 
-````
+````typescript
 interface Person{
     name:sting;
     age:number;
@@ -58,7 +58,7 @@ ldy.say()
 #### 接口扩展
 >接口可以继承接口
 
-````
+````typescript
 interface Animal{
     name:string
 }

@@ -25,11 +25,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
                 
             
                 
@@ -331,62 +331,66 @@
 <blockquote>
 <p>&#x5BF9;&#x4F20;&#x5165;&#x5BF9;&#x8C61;&#x7684;&#x7EA6;&#x675F;</p>
 </blockquote>
-<pre><code>interface limit={
-    name:sting;
-    age:number
-}
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">interface</span> <span class="token class-name">limit</span><span class="token operator">=</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span>sting<span class="token punctuation">;</span>
+    age<span class="token operator">:</span><span class="token builtin">number</span>
+<span class="token punctuation">}</span>
 
-function test(info:limit){
-    console.log(info.name,info.age)
-}
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">info<span class="token operator">:</span>limit</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>name<span class="token punctuation">,</span>info<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-test({name:&apos;ssss&apos;,age:18})
-</code></pre><h4 id="&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><a name="&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;</h4>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">&apos;ssss&apos;</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><a name="&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x63A5;&#x53E3;</h4>
 <blockquote>
 <p>&#x5BF9;&#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD4;&#x56DE;&#x503C;&#x8FDB;&#x884C;&#x7EA6;&#x675F;</p>
 </blockquote>
-<pre><code>interface encrypt{
-    (key:string,value:string):string
-}
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">interface</span> <span class="token class-name">encrypt</span><span class="token punctuation">{</span>
+    <span class="token punctuation">(</span>key<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>value<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span>
 
-let md5:encrypt=function(key:string,value:string){
-    return key+value
-}
-</code></pre><h4 id="&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><a name="&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;</h4>
+<span class="token keyword">let</span> md5<span class="token operator">:</span><span class="token function-variable function">encrypt</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>value<span class="token operator">:</span><span class="token builtin">string</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> key<span class="token operator">+</span>value
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><a name="&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7C7B;&#x578B;&#x63A5;&#x53E3;</h4>
 <blockquote>
 <p>&#x5BF9;&#x7C7B;&#x7684;&#x7EA6;&#x675F;</p>
 </blockquote>
-<pre><code>interface Person{
-    name:sting;
-    age:number;
-    say(str:string):void;
-}
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">interface</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span>sting<span class="token punctuation">;</span>
+    age<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+    <span class="token function">say</span><span class="token punctuation">(</span>str<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-class Man implements Person{
-    name:&apos;ldy&apos;;
-    age: 24;
-    constructor(name:tring){
+<span class="token keyword">class</span> <span class="token class-name">Man</span> <span class="token keyword">implements</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token string">&apos;ldy&apos;</span><span class="token punctuation">;</span>
+    age<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token operator">:</span>tring</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-    }
-    say(str:string){
-        console.log(`my name is:${this.name}`)
-    }
-}
+    <span class="token punctuation">}</span>
+    <span class="token function">say</span><span class="token punctuation">(</span><span class="token parameter">str<span class="token operator">:</span><span class="token builtin">string</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">my name is:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-let ldy = new Man(&apos;test&apos;);
-ldy.say()
-</code></pre><h4 id="&#x63A5;&#x53E3;&#x6269;&#x5C55;"><a name="&#x63A5;&#x53E3;&#x6269;&#x5C55;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x6269;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x6269;&#x5C55;</h4>
+<span class="token keyword">let</span> ldy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Man</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ldy<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="&#x63A5;&#x53E3;&#x6269;&#x5C55;"><a name="&#x63A5;&#x53E3;&#x6269;&#x5C55;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x6269;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x6269;&#x5C55;</h4>
 <blockquote>
 <p>&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x63A5;&#x53E3;</p>
 </blockquote>
-<pre><code>interface Animal{
-    name:string
-}
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">interface</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span>
 
-interface Person extends Amimal{
-    work():void;
-}
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token keyword">extends</span> <span class="token class-name">Amimal</span><span class="token punctuation">{</span>
+    <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
+
                                 
                                 </section>
                             
@@ -429,7 +433,7 @@ interface Person extends Amimal{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"接口","level":"4.2","depth":1,"next":{"title":"装饰器","level":"4.3","depth":1,"path":"pages/typescript/decorator.md","ref":"./pages/typescript/decorator.md","articles":[]},"previous":{"title":"数据类型","level":"4.1","depth":1,"path":"pages/typescript/dataType.md","ref":"./pages/typescript/dataType.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/typescript/interface.md","mtime":"2020-05-01T07:41:10.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T12:11:20.671Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"接口","level":"4.2","depth":1,"next":{"title":"装饰器","level":"4.3","depth":1,"path":"pages/typescript/decorator.md","ref":"./pages/typescript/decorator.md","articles":[]},"previous":{"title":"数据类型","level":"4.1","depth":1,"path":"pages/typescript/dataType.md","ref":"./pages/typescript/dataType.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","code","github-buttons","-highlight","prism","prism-themes"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赞赏","alipayText":" "},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/typescript/interface.md","mtime":"2020-05-01T15:57:50.654Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T16:09:19.924Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -447,15 +451,11 @@ interface Person extends Amimal{
         
     
         
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         

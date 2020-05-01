@@ -1,6 +1,6 @@
 ## TypeScript相对于javascript来说增加了以下几种类型
 
-````
+````typescript
 //1.元组类型 (tuple)
 //2.枚举类型 (enum)
 //3.任意类型（any）

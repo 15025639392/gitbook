@@ -25,11 +25,11 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
                 
             
                 
@@ -322,7 +322,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="11&#x5B89;&#x88C5;gitbook"><a name="11&#x5B89;&#x88C5;gitbook" class="plugin-anchor" href="#11&#x5B89;&#x88C5;gitbook"><i class="fa fa-link" aria-hidden="true"></i></a>1.1&#x5B89;&#x88C5;gitbook</h2>
-<pre><code># npm install -g gitbook-cli
+<pre class="language-"><code># npm install -g gitbook-cli
 --- &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;gitbook,&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x9ED8;&#x8BA4;&#x540C;&#x65F6;&#x5B89;&#x88C5; GitBook
 </code></pre><p>[<a href="https://chrisniael.gitbooks.io/gitbook-documentation/content/" target="_blank">https://chrisniael.gitbooks.io/gitbook-documentation/content/</a>]</p>
 <h2 id="12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="plugin-anchor" href="#12gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2gitbook&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
@@ -379,7 +379,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook基本使用","level":"1.1","depth":1,"next":{"title":"git基本使用","level":"1.2","depth":1,"path":"pages/gitconfig.md","ref":"./pages/gitconfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","github-buttons","donate","sharing-plus"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"README.md","mtime":"2020-04-10T19:08:20.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T12:11:20.671Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"gitbook基本使用","level":"1.1","depth":1,"next":{"title":"git基本使用","level":"1.2","depth":1,"path":"pages/gitconfig.md","ref":"./pages/gitconfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","code","github-buttons","-highlight","prism","prism-themes"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赞赏","alipayText":" "},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"README.md","mtime":"2020-04-10T19:08:20.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T16:09:19.924Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -397,15 +397,11 @@
         
     
         
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
         <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
