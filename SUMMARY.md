@@ -1,4 +1,4 @@
-* [初衷与延伸](README.md)
+* [反思与总结](README.md)
 
 ## javascript相关
   * [javascript基础](./pages/javascript/base.md)
