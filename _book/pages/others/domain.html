@@ -1,0 +1,679 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>跨域方案 · 前端知识整理</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ldy">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../style/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../javascript/ast.html" />
+    
+    
+    <link rel="prev" href="../javascript/word.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    初衷与延伸
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">javascript相关</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../javascript/base.html">
+            
+                <a href="../javascript/base.html">
+            
+                    
+                    javascript基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../javascript/step1.html">
+            
+                <a href="../javascript/step1.html">
+            
+                    
+                    javascript进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../javascript/strict.html">
+            
+                <a href="../javascript/strict.html">
+            
+                    
+                    javascript严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TypeScript相关</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../typescript/dataType.html">
+            
+                <a href="../typescript/dataType.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../typescript/interface.html">
+            
+                <a href="../typescript/interface.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../typescript/decorator.html">
+            
+                <a href="../typescript/decorator.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">构建工具</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../build-utils/gulp.html">
+            
+                <a href="../build-utils/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">http协议</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../http/compose.html">
+            
+                <a href="../http/compose.html">
+            
+                    
+                    请求组成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../http/httpCache.html">
+            
+                <a href="../http/httpCache.html">
+            
+                    
+                    http缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端周边技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../javascript/word.html">
+            
+                <a href="../javascript/word.html">
+            
+                    
+                    常用单词汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.2" data-path="domain.html">
+            
+                <a href="domain.html">
+            
+                    
+                    跨域方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../javascript/ast.html">
+            
+                <a href="../javascript/ast.html">
+            
+                    
+                    AST抽象语法树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="engineering.html">
+            
+                <a href="engineering.html">
+            
+                    
+                    前端工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../gitbook.html">
+            
+                <a href="../gitbook.html">
+            
+                    
+                    gitbook基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../gitconfig.html">
+            
+                <a href="../gitconfig.html">
+            
+                    
+                    git基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../javascript/qna.html">
+            
+                <a href="../javascript/qna.html">
+            
+                    
+                    进阶面试题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">linux相关</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../linux/command.html">
+            
+                <a href="../linux/command.html">
+            
+                    
+                    linux基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >跨域方案</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="1-jsonp"><a name="1-jsonp" class="plugin-anchor" href="#1-jsonp"><i class="fa fa-link" aria-hidden="true"></i></a>1. jsonp</h4>
+<blockquote>
+<p>&#x53EA;&#x80FD;&#x53D1;&#x9001;get&#x8BF7;&#x6C42;&#xFF0C;xss&#x653B;&#x51FB;&#xFF0C;&#x4E0D;&#x5B89;&#x5168;</p>
+</blockquote>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span> <span class="token function">jsonp</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>url<span class="token punctuation">,</span>params<span class="token punctuation">,</span>cb<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> script <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;script&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        window<span class="token punctuation">[</span>cb<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            window<span class="token punctuation">[</span>cb<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> newparams <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token operator">...</span>params<span class="token punctuation">,</span>
+            cb
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> newparams<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>params<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        script<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>arr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">&apos;&amp;&apos;</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="2-cors"><a name="2-cors" class="plugin-anchor" href="#2-cors"><i class="fa fa-link" aria-hidden="true"></i></a>2. cors</h4>
+<blockquote>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5B89;&#x5168;&#xFF0C;&#x9EBB;&#x70E6;</p>
+</blockquote>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">let</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;express&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">83</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> witList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;http://localhost:3000&apos;</span><span class="token punctuation">]</span><span class="token comment">//&#x8BBE;&#x7F6E;&#x767D;&#x540D;&#x5355;</span>
+<span class="token keyword">let</span> preFix <span class="token operator">=</span> <span class="token string">&apos;Access-Control-&apos;</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">{</span>origin<span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>headers<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>witList<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>origin<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//&#x5141;&#x8BB8;&#x67D0;&#x4E2A;&#x6E90;&#x53CD;&#x95EE;</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Origin&apos;</span><span class="token punctuation">,</span>origin<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x5141;&#x8BB8;&#x643A;&#x5E26;&#x54EA;&#x4E2A;&#x5934;</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Header&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x5141;&#x8BB8;&#x643A;&#x5E26;cookies</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Credentials&apos;</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Methods&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;PUT&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x9884;&#x68C0;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Max-Age&apos;</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//&#x5141;&#x8BB8;&#x8FD4;&#x56DE;&#x7684;&#x5934;</span>
+        res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&apos;Allow-Expose-Headers&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token parameter">suffix</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>preFix<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>suffix<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-postmessage"><a name="3-postmessage" class="plugin-anchor" href="#3-postmessage"><i class="fa fa-link" aria-hidden="true"></i></a>3. postMessage</h4>
+<p>a.html</p>
+<pre class="language-"><code class="lang-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>iframe<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://localhost:83/b.html<span class="token punctuation">&quot;</span></span> <span class="token attr-name">onload</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onload(this)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    function onload(dom){
+        dom.contentWindow.postMessage(&apos;b&#x4F60;&#x597D;&apos;);
+        window.onmessage=function(e){
+            console.log(e.data);//a&#x4F60;&#x597D;
+        }
+    }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>b.html</p>
+<pre class="language-"><code class="lang-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    window.onmessage(e){
+        console.log(e.data);//b&#x4F60;&#x597D;
+        e.source.postMessage(&apos;a&#x4F60;&#x597D;&apos;,e.origin)
+    }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="4-windowname"><a name="4-windowname" class="plugin-anchor" href="#4-windowname"><i class="fa fa-link" aria-hidden="true"></i></a>4. window.name</h4>
+<blockquote>
+<p>a &#x548C; b &#x662F;&#x540C;&#x57DF;&#x7684; <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></p>
+<p>c &#x662F;&#x72EC;&#x7ACB;&#x7684; <a href="http://localhost:4000" target="_blank">http://localhost:4000</a></p>
+<p>a &#x83B7;&#x53D6; c &#x6570;&#x636E;</p>
+<p>a &#x5148;&#x5F15;&#x7528; c  c&#x628A;&#x503C;&#x653E;&#x5230;window.name; &#x628A;a&#x7684;&#x5730;&#x5740;&#x5F15;&#x7528;&#x6539;&#x4E3A;b</p>
+</blockquote>
+<p>&#x603B;&#x7ED3;&#xFF1A;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x5F88;&#x8822;</p>
+<h4 id="5-hash&#x901A;&#x4FE1;"><a name="5-hash&#x901A;&#x4FE1;" class="plugin-anchor" href="#5-hash&#x901A;&#x4FE1;"><i class="fa fa-link" aria-hidden="true"></i></a>5. hash&#x901A;&#x4FE1;</h4>
+<blockquote>
+<p>a &#x548C; b &#x662F;&#x540C;&#x57DF;&#x7684; <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></p>
+<p>c &#x662F;&#x72EC;&#x7ACB;&#x7684; <a href="http://localhost:4000" target="_blank">http://localhost:4000</a></p>
+<p>a &#x83B7;&#x53D6; c &#x6570;&#x636E;</p>
+<p>a &#x628A;hash&#x4F20;&#x7ED9; c  c&#x6536;&#x5230;hash&#x540E;&#x628A;&#x7ED3;&#x679C;&#x901A;&#x8FC7;hash&#x4F20;&#x7ED9;b; b&#x5C06;&#x7ED3;&#x679C;&#x653E;&#x5230;a&#x7684;hash&#x4E2D;</p>
+</blockquote>
+<p>&#x603B;&#x7ED3;&#xFF1A;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E5F;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x5F88;&#x8822;</p>
+<h4 id="6-domain"><a name="6-domain" class="plugin-anchor" href="#6-domain"><i class="fa fa-link" aria-hidden="true"></i></a>6. domain</h4>
+<blockquote>
+<p>a-&gt; <a href="http://bstem.test.zcareze.com" target="_blank">http://bstem.test.zcareze.com</a> &#x548C; b -&gt;<a href="http://manage.test.zcareze.com" target="_blank">http://manage.test.zcareze.com</a></p>
+<p>a &#x548C; b &#x90FD;&#x52A0;&#x4E0A; window.domain = &quot;test.zcareze.com&quot;</p>
+</blockquote>
+<h4 id="7-websoket"><a name="7-websoket" class="plugin-anchor" href="#7-websoket"><i class="fa fa-link" aria-hidden="true"></i></a>7. webSoket</h4>
+<p>server.js</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">let</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;express&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> webSorcket <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;ws&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> wss <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">webSorcket<span class="token punctuation">.</span>Server</span><span class="token punctuation">(</span><span class="token punctuation">{</span>port<span class="token operator">:</span><span class="token number">3000</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+wss<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;connect&apos;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">ws</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    ws<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;message&apos;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//i love you</span>
+        ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&apos;get it out&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>test.js</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">//&#x4E00;&#x822C;&#x4F7F;&#x7528;socket.io</span>
+<span class="token keyword">let</span> socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span><span class="token string">&apos;ws://localhost:3000&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+socket<span class="token punctuation">.</span><span class="token function-variable function">onopen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&apos;i love you&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+socket<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token comment">//get it out</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../javascript/word.html" class="navigation navigation-prev " aria-label="Previous page: 常用单词汇总">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../javascript/ast.html" class="navigation navigation-next " aria-label="Next page: AST抽象语法树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"跨域方案","level":"6.2","depth":1,"next":{"title":"AST抽象语法树","level":"6.3","depth":1,"path":"pages/javascript/ast.md","ref":"./pages/javascript/ast.md","articles":[]},"previous":{"title":"常用单词汇总","level":"6.1","depth":1,"path":"pages/javascript/word.md","ref":"./pages/javascript/word.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","expandable-chapters","anchors","github","code","mermaid-gb3","github-buttons","-highlight","prism","prism-themes"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"github":{"url":"https://github.com/15025639392/gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赞赏","alipayText":" "},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"15025639392","repo":"gitbook","type":"star","size":"small","count":true}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"ldy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识整理","language":"zh-hans","gitbook":"3.2.3","description":"搜索模块名称"},"file":{"path":"pages/others/domain.md","mtime":"2020-05-01T20:32:39.526Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T10:01:33.910Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

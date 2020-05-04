@@ -17,6 +17,7 @@
         "anchors",
         "github",
         "code",
+        "mermaid-gb3",
         "github-buttons",
         "-highlight",
         "prism",
