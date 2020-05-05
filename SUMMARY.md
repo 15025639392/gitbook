@@ -6,9 +6,11 @@
   * [javascript严格模式](./pages/javascript/strict.md)
 
 ## TypeScript相关
-  * [数据类型](./pages/typescript/dataType.md)
   * [接口](./pages/typescript/interface.md)
+  * [范型](./pages/typescript/t.md)
   * [装饰器](./pages/typescript/decorator.md)
+  * [数据类型](./pages/typescript/dataType.md)
+  * [联合类型及类型守护](./pages/typescript/statement.md)
   
 ## 构建工具
 * [gulp](./pages/build-utils/gulp.md)

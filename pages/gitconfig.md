@@ -111,3 +111,8 @@
   >git remote add origin [地址] 创建远程仓库后，会让git记录远程仓库叫origin
 
   >当git push -u origin master，git 就知道是对远程仓库origin（[地址]）提交文件 下次提交问卷直接git push 就行了
+
+#### 静态页面展示
+1. 创建gh-pages分之，将静态文件上传到gh-pages分之，注：这里的gh-pages相当于网站根目录
+2. 网站反问地址为 https://[账户名称].github.io/项目名称/，
+  * 如：https://15025639392.github.io/gitbook/
