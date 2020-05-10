@@ -1,4 +1,4 @@
-* [常用网站收集整理](README.md)
+* [传送门](README.md)
 
 ## style相关
   * [sass语法及使用](./pages/style/sass.md)
@@ -11,6 +11,9 @@
   * [javascript基础](./pages/javascript/base.md)
   * [javascript进阶](./pages/javascript/step1.md)
   * [javascript严格模式](./pages/javascript/strict.md)
+
+## 正则规则
+  * [零宽断言](./pages/reg/assert.md)
 
 ## TypeScript相关
   * [接口](./pages/typescript/interface.md)
@@ -26,6 +29,9 @@
 * [http简介](./pages/http/base.md)
 * [请求组成](./pages/http/compose.md)
 * [http缓存](./pages/http/httpCache.md)
+
+## 突发奇想
+* [思想维度论](./pages/books/book3.md)
 
 ## 阅读笔记
 * [墨菲定律](./pages/books/book1.md)
