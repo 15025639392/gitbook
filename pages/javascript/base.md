@@ -97,6 +97,7 @@ function deepCopy(oldObj){
     }
     return newObj
 }
+console.log(deepCopy('test'))
 ````
 
 ## 1.6 new关键字执行过程

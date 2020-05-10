@@ -1,4 +1,11 @@
-* [反思与总结](README.md)
+* [常用网站收集整理](README.md)
+
+## style相关
+  * [sass语法及使用](./pages/style/sass.md)
+
+## dom/bom
+  * [dom基础](./pages/html/dom.md)
+  * [bom基础](./pages/html/bom.md)
 
 ## javascript相关
   * [javascript基础](./pages/javascript/base.md)
@@ -16,8 +23,13 @@
 * [gulp](./pages/build-utils/gulp.md)
 
 ## http协议
+* [http简介](./pages/http/base.md)
 * [请求组成](./pages/http/compose.md)
 * [http缓存](./pages/http/httpCache.md)
+
+## 阅读笔记
+* [墨菲定律](./pages/books/book1.md)
+* [人间失格](./pages/books/book2.md)
 
 ## 前端周边技术
   * [常用单词汇总](./pages/javascript/word.md)
